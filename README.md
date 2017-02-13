@@ -1,1 +1,1 @@
-# constellations.js
+# constellations
