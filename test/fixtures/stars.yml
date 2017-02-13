@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  x.integer: MyString
+  y.integer: MyString
+  constellation_id.integer: MyString
+
+two:
+  x.integer: MyString
+  y.integer: MyString
+  constellation_id.integer: MyString
