@@ -25,6 +25,16 @@ module Api::V1
       end
     end
 
+    def login
+      user = User.find_by(email: params[:email])
+      if user && user.authenticate(params[:password])
+        # issue new jwt token
+        jwt = Auth.encrypt({user: user.id})
+        # render json with token
+        render json: {jwt: jwt} # sends token to react action
+      end
+    end
+
 
     def edit
     end
