@@ -31,8 +31,13 @@ module Api::V1
         # issue new jwt token
         jwt = Auth.encrypt({user: user.id})
         # render json with token
-        render json: {jwt: jwt} # sends token to react action
+        render json: {jwt: jwt, username: user.username} # sends token to react action
       end
+    end
+
+    def active
+      username = active_user.username
+      render json: {username: username}
     end
 
 
