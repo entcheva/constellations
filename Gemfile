@@ -26,7 +26,7 @@ gem 'puma', '~> 3.0'
 gem 'rack-cors'
 gem 'dotenv-rails'
 gem 'rest-client'
-gem 'active_model_serializers'
+# gem 'active_model_serializers'
 gem 'bcrypt'
 gem 'jwt'
 
