@@ -8,6 +8,11 @@ module Api::V1
       @star = Star.create(star_params)
     end
 
+    def index
+      @stars = Star.all
+      render json: @stars
+    end
+
     def show
     end
 

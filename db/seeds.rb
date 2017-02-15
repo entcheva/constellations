@@ -7,6 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-star1 = Star.create(x: 10, y: 10, z: 10, constellation_id: 0)
-star2 = Star.create(x: 20, y: 20, z: 20, constellation_id: 0)
-star3 = Star.create(x: 30, y: 30, z: 30, constellation_id: 0)
+
+star1 = Star.create(x: 10, y: 10, z: 10, constellation_id: 1)
+star2 = Star.create(x: 20, y: 20, z: 20, constellation_id: 1)
+star3 = Star.create(x: 30, y: 30, z: 30, constellation_id: 1)
+
+constellation1 = Constellation.create(name: 'First Constellation', stars: [1, 2, 3], user_id: 54)
