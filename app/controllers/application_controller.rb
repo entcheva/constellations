@@ -7,7 +7,6 @@ class ApplicationController < ActionController::API
   end
 
   def current_user
-    binding.pry
     token = request.headers['HTTP_AUTHORIZATION']
     if token
       user_info = Auth.decode(token)
