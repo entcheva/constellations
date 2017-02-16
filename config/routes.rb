@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       post 'login', to: 'users#login'
       get 'active', to: 'users#active'
       get 'active_id', to: 'users#active_id'
+      get 'my_constellations', to: 'constellations#my_constellations'
       resources :stars
       resources :constellations
     end

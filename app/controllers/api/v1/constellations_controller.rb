@@ -5,6 +5,11 @@ module Api::V1
       @constellation = Constellation.create(name: 'Unnamed', stars_array: params['stars_array'], user_id: params['user_id'])
     end
 
+    def my_constellations
+      @constellations = Constellation.where(user_id: active_user.id)
+      render json: @constellations
+    end
+
     def update
     end
 
