@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       post 'signup', to: 'users#create'
       post 'login', to: 'users#login'
       get 'active', to: 'users#active'
+      get 'active_id', to: 'users#active_id'
       resources :stars
       resources :constellations
     end

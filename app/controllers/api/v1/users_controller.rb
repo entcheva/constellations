@@ -40,6 +40,10 @@ module Api::V1
       render json: {username: username}
     end
 
+    def active_id
+      user_id = active_user.id
+      render json: {user_id: user_id}
+    end
 
     def edit
     end
