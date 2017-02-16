@@ -1,9 +1,6 @@
 module Api::V1
   class UsersController < ApplicationController
 
-    def show
-    end
-
     def create
       user = User.new(user_params)
       if params[:password] == params[:password_confirmation]
@@ -28,10 +25,8 @@ module Api::V1
     def login
       user = User.find_by(email: params[:email])
       if user && user.authenticate(params[:password])
-        # issue new jwt token
-        jwt = Auth.encrypt({user: user.id})
-        # render json with token
-        render json: {jwt: jwt, username: user.username} # sends token to react action
+        jwt = Auth.encrypt({user: user.id})  # issue new jwt token
+        render json: {jwt: jwt, username: user.username}  # render json with token and sends token to react action
       end
     end
 
@@ -43,12 +38,6 @@ module Api::V1
     def active_id
       user_id = active_user.id
       render json: {user_id: user_id}
-    end
-
-    def edit
-    end
-
-    def update
     end
 
     def delete

@@ -1,9 +1,6 @@
 module Api::V1
   class StarsController < ApplicationController
 
-    def new
-    end
-
     def create
       @star = Star.create(star_params)
     end
@@ -11,21 +8,6 @@ module Api::V1
     def index
       @stars = Star.all
       render json: @stars
-    end
-
-    def show
-    end
-
-    def update
-    end
-
-    def edit
-    end
-
-    def delete
-    end
-
-    def destroy
     end
 
     private

@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::API
 
   # def authenticate!
-  #   unless current_user
+  #   unless active_user
   #     # redirect to login page
   #   end
   # end
