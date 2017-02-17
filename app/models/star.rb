@@ -1,3 +1,3 @@
 class Star < ApplicationRecord
-  belongs_to :constellation
+  belongs_to :constellation, optional: true
 end

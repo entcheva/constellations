@@ -3,7 +3,6 @@ class CreateStars < ActiveRecord::Migration[5.0]
     create_table :stars do |t|
       t.integer :x
       t.integer :y
-      t.integer :z
       t.integer :constellation_id
 
       t.timestamps
