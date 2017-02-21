@@ -1,6 +1,11 @@
 module Api::V1
   class ConstellationsController < ApplicationController
 
+    def index
+      @constellations = Constellation.all
+      render json: @constellations
+    end
+
     def create
       @constellation = Constellation.create(name: 'Unnamed', stars_array: params['stars_array'], user_id: params['user_id'])
     end
