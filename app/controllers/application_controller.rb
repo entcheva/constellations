@@ -1,4 +1,4 @@
-require_relative 'lib/auth.rb'
+require './lib/auth.rb'
 
 class ApplicationController < ActionController::API
 
