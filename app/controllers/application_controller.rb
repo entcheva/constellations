@@ -1,5 +1,3 @@
-require './lib/auth.rb'
-
 class ApplicationController < ActionController::API
 
   # def authenticate!
