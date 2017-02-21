@@ -1,3 +1,5 @@
+require 'lib/auth.rb'
+
 module Api::V1
   class UsersController < ApplicationController
 
