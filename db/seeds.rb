@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-stars = 200
+stars = 100
 counter = 0
 while counter < stars do
   x = rand(1400)
