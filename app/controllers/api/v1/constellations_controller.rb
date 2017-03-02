@@ -16,7 +16,8 @@ module Api::V1
     end
 
     def show
-      @constellations = Constellation.where(user_id: User.find(params[:id]).id)
+      user = User.find(params[:id])
+      @constellations = Constellation.where(user_id: user.id)
       render json: @constellations
     end
 
