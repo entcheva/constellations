@@ -48,6 +48,11 @@ module Api::V1
     def delete
     end
 
+    def clear_guest
+      guest = User.find(83)
+      guest.constellations.destroy_all
+    end
+
     private
 
     def user_params
